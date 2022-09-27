@@ -1,0 +1,17 @@
+{% extends 'departments/base.html' %}
+{% block content %}
+<form method="POST" action="{% url 'users:logout' %}">
+{% csrf_token %}
+
+<div style="background-image: url('C:\Users\Sherin\Desktop\Django\images\pexels-anete-lusina-6331082.jpg');"></div>
+<div class="card card-side bg-base-100 shadow-xl">
+  <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
+  <div class="card-body">
+    <h2 class="card-title">Logging Out!!!!</h2>
+    <p>You are logging out.Thank u</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Bye</button>
+    </div>
+  </div>
+</div>
+{% endblock %} 

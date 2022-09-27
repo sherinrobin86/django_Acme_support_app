@@ -1,0 +1,40 @@
+{% extends 'departments/base.html' %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+
+    <div>
+        <label class="font-medium italic m-10">subject</label>
+        <input  class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-6 border-r-8"  placeholder="subjct" type="text" name="subject" id="subject" >
+    </div>
+
+    <div>
+        <label class="font-medium italic m-10">Description</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="Description" type="text" name="desc" id="desc" >
+
+    </div>  
+
+    
+
+    <div>
+        <label class="font-medium italic m-10">Priority</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="priority" type="text" name="priority" id="priority" >
+
+    </div>  
+
+    <div>
+        <label class="font-medium italic m-10">email:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8" value="{{user.email}}" placeholder="email" type="text" name="email" id="email" >
+
+    </div>
+
+    <div>
+        <label class="font-medium italic m-10">phone</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="phone" type="text" name="phone" id="phone" >
+
+    </div>    
+    </div>
+    <input type="submit" class=" ml-48 mt-3 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-5 mb-7"  name="add_tkt" value="add_tkt">
+
+    </form>
+    {% endblock %}  

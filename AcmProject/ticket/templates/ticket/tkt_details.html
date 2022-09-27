@@ -1,0 +1,16 @@
+{% extends 'departments/base.html' %}
+{% block content %}
+   {% for i in tkt %}
+    <h4>Tkt_Subject:{{i.subject}}</h4>
+    <h4>Tkt_desc:{{i.desc}}</h4>
+    <h4>Tkt:Priority:{{i.priority}}</h4>
+    <h4>email:{{i.email}}</h4>
+    <h4>Phone:{{i.phone}}</h4>
+
+     {% endfor %}
+
+     <div>
+    <a href="{% url 'ticket:tkt_add'%}"><h1>Add Ticket</h1>
+    </div>
+  
+    {% endblock %}  

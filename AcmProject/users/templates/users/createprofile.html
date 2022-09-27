@@ -1,0 +1,47 @@
+{% extends 'departments/base.html' %}
+{% block content %}
+<div class="bg-yellow-100">
+ <h1 class="text-xl italic font-bold text-white-800 text-center">User Creation Form</h1>
+
+  <form method="POST">
+        {% csrf_token %}
+    <div>
+        <label class="font-medium italic m-10">User Name:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="Name" type="text" name="name" id="name" >
+
+    </div>  
+
+    <div>
+        <label class="font-medium italic m-10">Email:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="email" type="text" name="email" id="email" >
+
+    </div>  
+
+     <div>
+        <label class="font-medium italic m-10">password:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="password" type="text" name="password" id="password" >
+
+    </div>  
+    
+     <div>
+        <label class="font-medium italic m-10">phone:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="phone" type="text" name="phone" id="phone" >
+
+    </div>  
+
+     <div>
+        <label class="font-medium italic m-10">Department:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="department" type="text" name="department" id="department" >
+
+    </div>  
+
+     <div>
+        <label class="font-medium italic m-10">Role:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="role" type="text" name="role" id="role" >
+
+    </div>  
+
+    <input type="submit" class=" ml-48 mt-3 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-5 mb-7"  name="add_user" value="add_user">
+   
+    </form>
+    {% endblock %}    

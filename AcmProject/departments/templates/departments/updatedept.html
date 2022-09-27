@@ -1,0 +1,32 @@
+{% extends 'departments/base.html' %}
+{% block content %}
+ <h1 class="text-xl italic font-bold text-red-800 text-center">Update Department Form</h1>
+<form  class="w-2/5" method="POST" enctype="multipart/form-data" >
+    
+    {% csrf_token %}
+    <div>
+        <label class="font-medium italic m-10">Department Name:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-1 border-r-8" value="{{dept.name}}" placeholder="Name" type="text" name="name" id="name" >
+
+    </div>
+    
+    
+    <div>
+        <label class="font-medium italic m-10">Department Description:</label>
+        <input  class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-6 border-r-8" value="{{dept.description}}" placeholder="desc" type="text" name="desc" id="desc" >
+    </div>
+    
+        
+        
+    
+
+    <div>
+      
+        <input type="submit" class=" ml-48 mt-3 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-5 mb-7"  name="update_dept" value="update_dept">
+        
+
+    </div>
+    
+    
+</form>
+  {% endblock %} 

@@ -1,0 +1,17 @@
+{% extends 'departments/base.html' %}
+    {% block content %}
+    <div>
+<h1 style="font-style: italic;font-weight: 400;text-underline-position: below;background-color: rgb(177, 177, 247);">Department Details</h1>
+{% for i in dept %}
+   <h1><a href="{% url 'departments:departmentdet' i.id %}">{{i.name}}</h1>
+{% endfor %}
+{% comment %} <li><a href="{% url 'users:createprofile' %}"> Create User Profile</a></li>
+<li><a href="{% url 'departments:details' %}">Department</a></li>
+<li><a href="{% url 'ticket:tktdetails' %}">Tickets</a></li>
+{% if user.is_authenticated %}
+<li><a href="{% url 'users:logout' %}">Logout</a></li>
+{% else %}
+<li><a href="{% url 'users:login' %}">Login</a></li>
+{% endif %}  {% endcomment %}
+
+ {% endblock %}   

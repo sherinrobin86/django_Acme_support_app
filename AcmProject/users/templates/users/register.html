@@ -1,0 +1,48 @@
+
+    {% extends 'departments/base.html' %}
+    {% block content %}
+    <div class="bg-yellow-100">
+     <h1 class="text-xl italic font-bold text-white-800 text-center">User Registration Form</h1>
+    <form  class="w-1/5" method="POST" action="">
+        
+       {% csrf_token %}
+        <div>
+            <label class="font-medium italic m-10">User Name:</label>
+            <div   class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-8 border-r-8" >
+             {{form.username}}
+             </div>
+        </div>
+        <div>
+            <label class="font-medium italic m-10">email id::</label>
+            <div  class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-10 border-r-8" >
+             {{form.email}}
+             </div>
+        </div>
+        
+        <div>
+            <label class="font-medium italic m-10">password:</label>
+            <div  class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-10 border-r-8">
+            {{form.password1}}
+            </div>
+        </div>
+        <div>
+            <label class="font-medium italic m-10">confirm password:</label>
+            <div  class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-10 border-r-8">
+            {{form.password2}}
+            </div>
+        </div>
+        <div>
+          
+        <button type="submit" class=" btn btn-outline btn-secondary ml-10" >submit</button>
+            
+    
+        
+        <p>
+        <a class="ml-10 italic font-medium text-blue-600 underline-offset-2" href="{% url 'users:login' %}">Ragisterd user: Login</a>
+        </p>
+        </div>
+        
+    </form>
+    
+    </div>
+    {% endblock %}   
